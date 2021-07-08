@@ -1,0 +1,4680 @@
+<!DOCTYPE html> 
+<html> 
+
+	<head> 
+
+<title>Base and Control Interface </title> 
+
+	</head> 
+
+<style> 
+
+.forward{
+border 2px solid #43a047; 
+padding: 16px; 
+color:#fff; 
+background: #43a047; 
+Border-radius: 6px; 
+Transition: all 0.5;
+Font-size: 15px; 
+}
+
+.left{
+border 2px solid #0277bd; 
+padding: 16px; 
+color:#fff; 
+background: #0277bd; 
+Border-radius: 6px; 
+Transition: all 0.5;
+Font-size: 15px; 
+}
+
+.right{
+border 2px solid #ef6c00; 
+padding: 16px; 
+color:#fff; 
+background: #ef6c00; 
+Border-radius: 6px; 
+Transition: all 0.5;
+Font-size: 15px; 
+} 
+
+.stop{ 
+border 2px solid #d50000; 
+padding: 16px; 
+color:#fff; 
+background: #d50000; 
+Border-radius: 6px; 
+Transition: all 0.5;
+Font-size: 15px; 
+}
+
+.backward{ 
+border 2px solid #6d4c41; 
+padding: 16px; 
+color:#fff; 
+background: #6d4c41; 
+Border-radius: 6px; 
+Transition: all 0.5;
+Font-size: 15px; 
+}
+
+</style> 
+
+	<body> 
+
+<div style="background-color:lightblue">
+
+<h1 align="center"> Robot Arm Control Interface </h1> 
+</div> 
+
+<hr> 
+<hr> 
+
+<h3 align="left"> <b> Engine 1:</b> </h3> &nbsp;  &nbsp; <div class="main"> <input type="range" min="0" max="200" value="100"> </div> 
+
+
+<hr>
+<hr> 
+
+
+<h3 align="left"> <b> Engine 2:</b> </h3> &nbsp;  &nbsp; <div class="main"> <input type="range" min="0" max="200" value="100"> </div> 
+
+<hr> 
+<hr> 
+
+<h3 align="left"> <b> Engine 3:</b> </h3> &nbsp;  &nbsp; <div class="main"> <input type="range" min="0" max="200" value="100"> </div> 
+ 
+<hr> 
+<hr> 
+
+<h3 align="left"> <b> Engine 4:</b> </h3> &nbsp;  &nbsp; <div class="main"> <input type="range" min="0" max="200" value="100"> </div> 
+
+<hr> 
+<hr> 
+
+<h3 align="left"> <b> Engine 5:</b> </h3> &nbsp;  &nbsp; <div class="main"> <input type="range" min="0" max="200" value="100"> </div> 
+
+<hr> 
+<hr> 
+
+
+<input type="submit" value="Save">  &nbsp;  &nbsp; <input type="submit" value="Run">
+
+<hr> 
+<hr> 
+<hr> 
+<div style="background-color:#8c9eff">
+
+<h1 align="center"> Robot Base Control Interface </h1> 
+</div> 
+
+<hr> 
+<hr> 
+
+
+<div align="center">
+<input class="forward" type="submit" value="Forward" > 
+</div>
+<br>
+<br> 
+<br> 
+<br>
+
+<div align="left">
+<input class="left" type="submit" value="Left" >
+</div> 
+
+<div align="right">
+<input class="right" type="submit" value="Right"> 
+</div> 
+ 
+<div align="center">
+<input class="stop" type="submit" value="Stop">
+</div> 
+
+<br> 
+<br> 
+<br>
+
+<div align="center">
+<input class="backward" type="submit" value="Backward"> 
+</div>
+<br>
+<br>
+<br>
+
+<script>
+  window.watsonAssistantChatOptions = {
+      integrationID: "cce2e8e0-c69a-4725-b78b-6e11d3e8befa", // The ID of this integration.
+      region: "eu-gb", // The region your integration is hosted in.
+      serviceInstanceID: "9a88ea73-e79d-44f6-8c74-c9c7e04cad92", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+    document.head.appendChild(t);
+  });
+</script>
+
+<script> 
+{
+  "final": true,
+  "alternatives": [
+    {
+      "transcript": "Welcome to the bottom online how may I help you. ",
+      "confidence": 0.84,
+      "timestamps": [
+        [
+          "Welcome ",
+          0,
+          0.33
+        ],
+        [
+          "to ",
+          0.33,
+          0.58
+        ],
+        [
+          "the ",
+          0.58,
+          0.74
+        ],
+        [
+          "bottom ",
+          0.74,
+          1.07
+        ],
+        [
+          "online ",
+          1.07,
+          1.57
+        ],
+        [
+          "how ",
+          1.57,
+          1.71
+        ],
+        [
+          "may ",
+          1.71,
+          1.85
+        ],
+        [
+          "I ",
+          1.85,
+          1.92
+        ],
+        [
+          "help ",
+          1.92,
+          2.11
+        ],
+        [
+          "you. ",
+          2.11,
+          2.39
+        ]
+      ]
+    }
+  ],
+  "word_alternatives": [
+    {
+      "start_time": 0,
+      "end_time": 0.33,
+      "alternatives": [
+        {
+          "word": "welcome",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 0.33,
+      "end_time": 0.58,
+      "alternatives": [
+        {
+          "word": "to",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 0.58,
+      "end_time": 0.74,
+      "alternatives": [
+        {
+          "word": "the",
+          "confidence": 0.97
+        },
+        {
+          "word": "is",
+          "confidence": 0.01
+        },
+        {
+          "word": "use",
+          "confidence": 0.01
+        }
+      ]
+    },
+    {
+      "start_time": 0.74,
+      "end_time": 1.07,
+      "alternatives": [
+        {
+          "word": "pot",
+          "confidence": 0.41
+        },
+        {
+          "word": "bottom",
+          "confidence": 0.2
+        },
+        {
+          "word": "bought",
+          "confidence": 0.11
+        },
+        {
+          "word": "product",
+          "confidence": 0.09
+        },
+        {
+          "word": "part",
+          "confidence": 0.06
+        },
+        {
+          "word": "bar",
+          "confidence": 0.02
+        },
+        {
+          "word": "pod",
+          "confidence": 0.02
+        },
+        {
+          "word": "potter",
+          "confidence": 0.01
+        }
+      ]
+    },
+    {
+      "start_time": 1.07,
+      "end_time": 1.57,
+      "alternatives": [
+        {
+          "word": "online",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "start_time": 1.57,
+      "end_time": 1.71,
+      "alternatives": [
+        {
+          "word": "how",
+          "confidence": 0.91
+        }
+      ]
+    },
+    {
+      "start_time": 1.71,
+      "end_time": 1.85,
+      "alternatives": [
+        {
+          "word": "may",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 1.85,
+      "end_time": 1.92,
+      "alternatives": [
+        {
+          "word": "I",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 1.92,
+      "end_time": 2.11,
+      "alternatives": [
+        {
+          "word": "help",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 2.11,
+      "end_time": 2.39,
+      "alternatives": [
+        {
+          "word": "you",
+          "confidence": 1
+        }
+      ]
+    }
+  ],
+  "speaker": 0
+}
+
+Final Result 2
+{
+  "alternatives": [
+    {
+      "transcript": "Order trip for robot vacuum cleaner last week which got delivered yesterday I can cleaner appears to be damaged I was wondering if I can get a refund. ",
+      "timestamps": [
+        [
+          "Order ",
+          3.09,
+          3.53
+        ],
+        [
+          "trip ",
+          3.53,
+          3.81
+        ],
+        [
+          "for ",
+          3.81,
+          4.05
+        ],
+        [
+          "robot ",
+          4.05,
+          4.47
+        ],
+        [
+          "vacuum ",
+          4.47,
+          4.89
+        ],
+        [
+          "cleaner ",
+          4.89,
+          5.26
+        ],
+        [
+          "last ",
+          5.26,
+          5.63
+        ],
+        [
+          "week ",
+          5.63,
+          5.88
+        ],
+        [
+          "which ",
+          5.93,
+          6.11
+        ],
+        [
+          "got ",
+          6.11,
+          6.27
+        ],
+        [
+          "delivered ",
+          6.27,
+          6.62
+        ],
+        [
+          "yesterday ",
+          6.62,
+          7.24
+        ],
+        [
+          "I ",
+          7.74,
+          7.82
+        ],
+        [
+          "can ",
+          7.82,
+          8.02
+        ],
+        [
+          "cleaner ",
+          8.02,
+          8.35
+        ],
+        [
+          "appears ",
+          8.35,
+          8.74
+        ],
+        [
+          "to ",
+          8.74,
+          8.81
+        ],
+        [
+          "be ",
+          8.81,
+          8.92
+        ],
+        [
+          "damaged ",
+          8.92,
+          9.59
+        ],
+        [
+          "I ",
+          9.65,
+          9.68
+        ],
+        [
+          "was ",
+          9.68,
+          9.78
+        ],
+        [
+          "wondering ",
+          9.78,
+          10.11
+        ],
+        [
+          "if ",
+          10.11,
+          10.24
+        ],
+        [
+          "I ",
+          10.24,
+          10.32
+        ],
+        [
+          "can ",
+          10.32,
+          10.49
+        ],
+        [
+          "get ",
+          10.49,
+          10.61
+        ],
+        [
+          "a ",
+          10.61,
+          10.66
+        ],
+        [
+          "refund. ",
+          10.66,
+          11.32
+        ]
+      ]
+    }
+  ],
+  "speaker": 1,
+  "final": true,
+  "word_alternatives": [
+    {
+      "start_time": 3.09,
+      "end_time": 3.53,
+      "alternatives": [
+        {
+          "word": "order",
+          "confidence": 0.76
+        },
+        {
+          "word": "ordered",
+          "confidence": 0.11
+        },
+        {
+          "word": "border",
+          "confidence": 0.08
+        },
+        {
+          "word": "Porter",
+          "confidence": 0.02
+        }
+      ]
+    },
+    {
+      "start_time": 3.53,
+      "end_time": 3.81,
+      "alternatives": [
+        {
+          "word": "trip",
+          "confidence": 0.52
+        },
+        {
+          "word": "troops",
+          "confidence": 0.12
+        },
+        {
+          "word": "trips",
+          "confidence": 0.12
+        },
+        {
+          "word": "terms",
+          "confidence": 0.02
+        },
+        {
+          "word": "triple",
+          "confidence": 0.02
+        },
+        {
+          "word": "trust",
+          "confidence": 0.01
+        }
+      ]
+    },
+    {
+      "start_time": 3.81,
+      "end_time": 4.05,
+      "alternatives": [
+        {
+          "word": "for",
+          "confidence": 0.76
+        },
+        {
+          "word": "FOR",
+          "confidence": 0.01
+        }
+      ]
+    },
+    {
+      "start_time": 4.05,
+      "end_time": 4.47,
+      "alternatives": [
+        {
+          "word": "robot",
+          "confidence": 0.86
+        }
+      ]
+    },
+    {
+      "start_time": 4.47,
+      "end_time": 4.89,
+      "alternatives": [
+        {
+          "word": "vacuum",
+          "confidence": 0.93
+        }
+      ]
+    },
+    {
+      "start_time": 4.89,
+      "end_time": 5.26,
+      "alternatives": [
+        {
+          "word": "cleaner",
+          "confidence": 0.93
+        },
+        {
+          "word": "cleaners",
+          "confidence": 0.02
+        }
+      ]
+    },
+    {
+      "start_time": 5.26,
+      "end_time": 5.63,
+      "alternatives": [
+        {
+          "word": "last",
+          "confidence": 0.98
+        }
+      ]
+    },
+    {
+      "start_time": 5.63,
+      "end_time": 5.88,
+      "alternatives": [
+        {
+          "word": "week",
+          "confidence": 0.98
+        }
+      ]
+    },
+    {
+      "start_time": 5.93,
+      "end_time": 6.11,
+      "alternatives": [
+        {
+          "word": "which",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 6.11,
+      "end_time": 6.27,
+      "alternatives": [
+        {
+          "word": "got",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 6.27,
+      "end_time": 6.62,
+      "alternatives": [
+        {
+          "word": "delivered",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 6.62,
+      "end_time": 7.24,
+      "alternatives": [
+        {
+          "word": "yesterday",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 7.74,
+      "end_time": 7.82,
+      "alternatives": [
+        {
+          "word": "I",
+          "confidence": 0.94
+        }
+      ]
+    },
+    {
+      "start_time": 7.83,
+      "end_time": 8.02,
+      "alternatives": [
+        {
+          "word": "can",
+          "confidence": 0.98
+        }
+      ]
+    },
+    {
+      "start_time": 8.02,
+      "end_time": 8.35,
+      "alternatives": [
+        {
+          "word": "cleaner",
+          "confidence": 0.77
+        },
+        {
+          "word": "clean",
+          "confidence": 0.09
+        }
+      ]
+    },
+    {
+      "start_time": 8.35,
+      "end_time": 8.74,
+      "alternatives": [
+        {
+          "word": "appears",
+          "confidence": 0.94
+        },
+        {
+          "word": "appeared",
+          "confidence": 0.04
+        }
+      ]
+    },
+    {
+      "start_time": 8.74,
+      "end_time": 8.81,
+      "alternatives": [
+        {
+          "word": "to",
+          "confidence": 0.98
+        }
+      ]
+    },
+    {
+      "start_time": 8.81,
+      "end_time": 8.92,
+      "alternatives": [
+        {
+          "word": "be",
+          "confidence": 0.98
+        }
+      ]
+    },
+    {
+      "start_time": 8.92,
+      "end_time": 9.59,
+      "alternatives": [
+        {
+          "word": "damaged",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 9.65,
+      "end_time": 9.68,
+      "alternatives": [
+        {
+          "word": "I",
+          "confidence": 0.6
+        }
+      ]
+    },
+    {
+      "start_time": 9.68,
+      "end_time": 9.78,
+      "alternatives": [
+        {
+          "word": "was",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 9.78,
+      "end_time": 10.11,
+      "alternatives": [
+        {
+          "word": "wondering",
+          "confidence": 0.96
+        },
+        {
+          "word": "wonder",
+          "confidence": 0.02
+        }
+      ]
+    },
+    {
+      "start_time": 10.11,
+      "end_time": 10.24,
+      "alternatives": [
+        {
+          "word": "if",
+          "confidence": 0.98
+        }
+      ]
+    },
+    {
+      "start_time": 10.24,
+      "end_time": 10.32,
+      "alternatives": [
+        {
+          "word": "I",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 10.32,
+      "end_time": 10.49,
+      "alternatives": [
+        {
+          "word": "can",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 10.49,
+      "end_time": 10.61,
+      "alternatives": [
+        {
+          "word": "get",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 10.61,
+      "end_time": 10.66,
+      "alternatives": [
+        {
+          "word": "a",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 10.66,
+      "end_time": 11.32,
+      "alternatives": [
+        {
+          "word": "refund",
+          "confidence": 0.99
+        }
+      ]
+    }
+  ]
+}
+
+Final Result 3
+{
+  "final": true,
+  "alternatives": [
+    {
+      "transcript": "If the product is damaged you can return the product to get a full refund do you want me to process the return. ",
+      "confidence": 0.88,
+      "timestamps": [
+        [
+          "If ",
+          12.68,
+          12.82
+        ],
+        [
+          "the ",
+          12.82,
+          12.91
+        ],
+        [
+          "product ",
+          12.91,
+          13.24
+        ],
+        [
+          "is ",
+          13.24,
+          13.36
+        ],
+        [
+          "damaged ",
+          13.36,
+          13.84
+        ],
+        [
+          "you ",
+          13.84,
+          13.94
+        ],
+        [
+          "can ",
+          13.94,
+          14.06
+        ],
+        [
+          "return ",
+          14.06,
+          14.44
+        ],
+        [
+          "the ",
+          14.44,
+          14.53
+        ],
+        [
+          "product ",
+          14.53,
+          14.85
+        ],
+        [
+          "to ",
+          14.85,
+          14.92
+        ],
+        [
+          "get ",
+          14.92,
+          15.02
+        ],
+        [
+          "a ",
+          15.02,
+          15.07
+        ],
+        [
+          "full ",
+          15.07,
+          15.28
+        ],
+        [
+          "refund ",
+          15.28,
+          15.97
+        ],
+        [
+          "do ",
+          16.02,
+          16.13
+        ],
+        [
+          "you ",
+          16.13,
+          16.2
+        ],
+        [
+          "want ",
+          16.2,
+          16.32
+        ],
+        [
+          "me ",
+          16.32,
+          16.38
+        ],
+        [
+          "to ",
+          16.38,
+          16.45
+        ],
+        [
+          "process ",
+          16.45,
+          16.96
+        ],
+        [
+          "the ",
+          16.96,
+          17.07
+        ],
+        [
+          "return. ",
+          17.07,
+          17.53
+        ]
+      ]
+    }
+  ],
+  "word_alternatives": [
+    {
+      "start_time": 12.68,
+      "end_time": 12.82,
+      "alternatives": [
+        {
+          "word": "if",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 12.82,
+      "end_time": 12.91,
+      "alternatives": [
+        {
+          "word": "the",
+          "confidence": 0.98
+        }
+      ]
+    },
+    {
+      "start_time": 12.91,
+      "end_time": 13.24,
+      "alternatives": [
+        {
+          "word": "product",
+          "confidence": 0.98
+        }
+      ]
+    },
+    {
+      "start_time": 13.24,
+      "end_time": 13.36,
+      "alternatives": [
+        {
+          "word": "is",
+          "confidence": 0.98
+        }
+      ]
+    },
+    {
+      "start_time": 13.36,
+      "end_time": 13.84,
+      "alternatives": [
+        {
+          "word": "damaged",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 13.84,
+      "end_time": 13.94,
+      "alternatives": [
+        {
+          "word": "you",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 13.94,
+      "end_time": 14.06,
+      "alternatives": [
+        {
+          "word": "can",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 14.06,
+      "end_time": 14.44,
+      "alternatives": [
+        {
+          "word": "return",
+          "confidence": 0.98
+        }
+      ]
+    },
+    {
+      "start_time": 14.44,
+      "end_time": 14.53,
+      "alternatives": [
+        {
+          "word": "the",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 14.53,
+      "end_time": 14.85,
+      "alternatives": [
+        {
+          "word": "product",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 14.85,
+      "end_time": 14.92,
+      "alternatives": [
+        {
+          "word": "to",
+          "confidence": 0.97
+        },
+        {
+          "word": "you",
+          "confidence": 0.03
+        }
+      ]
+    },
+    {
+      "start_time": 14.92,
+      "end_time": 15.02,
+      "alternatives": [
+        {
+          "word": "get",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 15.02,
+      "end_time": 15.07,
+      "alternatives": [
+        {
+          "word": "a",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 15.07,
+      "end_time": 15.28,
+      "alternatives": [
+        {
+          "word": "full",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 15.28,
+      "end_time": 15.97,
+      "alternatives": [
+        {
+          "word": "refund",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 16.02,
+      "end_time": 16.13,
+      "alternatives": [
+        {
+          "word": "do",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 16.13,
+      "end_time": 16.2,
+      "alternatives": [
+        {
+          "word": "you",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 16.2,
+      "end_time": 16.32,
+      "alternatives": [
+        {
+          "word": "want",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 16.32,
+      "end_time": 16.38,
+      "alternatives": [
+        {
+          "word": "me",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 16.38,
+      "end_time": 16.45,
+      "alternatives": [
+        {
+          "word": "to",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 16.45,
+      "end_time": 16.96,
+      "alternatives": [
+        {
+          "word": "process",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 16.96,
+      "end_time": 17.07,
+      "alternatives": [
+        {
+          "word": "the",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 17.07,
+      "end_time": 17.53,
+      "alternatives": [
+        {
+          "word": "return",
+          "confidence": 0.99
+        }
+      ]
+    }
+  ],
+  "speaker": 0
+}
+
+Final Result 4
+{
+  "alternatives": [
+    {
+      "transcript": "That would be awesome hi Michael walk water dispenser in the same order I would like to keep that. ",
+      "timestamps": [
+        [
+          "That ",
+          18.09,
+          18.28
+        ],
+        [
+          "would ",
+          18.28,
+          18.41
+        ],
+        [
+          "be ",
+          18.41,
+          18.51
+        ],
+        [
+          "awesome ",
+          18.51,
+          19.02
+        ],
+        [
+          "hi ",
+          19.27,
+          19.47
+        ],
+        [
+          "Michael ",
+          19.47,
+          19.94
+        ],
+        [
+          "walk ",
+          19.94,
+          20.18
+        ],
+        [
+          "water ",
+          20.18,
+          20.45
+        ],
+        [
+          "dispenser ",
+          20.45,
+          20.99
+        ],
+        [
+          "in ",
+          20.99,
+          21.05
+        ],
+        [
+          "the ",
+          21.05,
+          21.16
+        ],
+        [
+          "same ",
+          21.16,
+          21.47
+        ],
+        [
+          "order ",
+          21.47,
+          21.85
+        ],
+        [
+          "I ",
+          22,
+          22.05
+        ],
+        [
+          "would ",
+          22.05,
+          22.15
+        ],
+        [
+          "like ",
+          22.15,
+          22.28
+        ],
+        [
+          "to ",
+          22.28,
+          22.38
+        ],
+        [
+          "keep ",
+          22.38,
+          22.64
+        ],
+        [
+          "that. ",
+          22.64,
+          22.96
+        ]
+      ]
+    }
+  ],
+  "speaker": 1,
+  "final": true,
+  "word_alternatives": [
+    {
+      "start_time": 18.09,
+      "end_time": 18.28,
+      "alternatives": [
+        {
+          "word": "that",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 18.28,
+      "end_time": 18.41,
+      "alternatives": [
+        {
+          "word": "would",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 18.41,
+      "end_time": 18.51,
+      "alternatives": [
+        {
+          "word": "be",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 18.51,
+      "end_time": 19.02,
+      "alternatives": [
+        {
+          "word": "awesome",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 19.27,
+      "end_time": 19.47,
+      "alternatives": [
+        {
+          "word": "hi",
+          "confidence": 0.48
+        },
+        {
+          "word": "I",
+          "confidence": 0.43
+        },
+        {
+          "word": "how",
+          "confidence": 0.03
+        },
+        {
+          "word": "hello",
+          "confidence": 0.01
+        }
+      ]
+    },
+    {
+      "start_time": 19.47,
+      "end_time": 19.94,
+      "alternatives": [
+        {
+          "word": "Michael",
+          "confidence": 0.89
+        },
+        {
+          "word": "micro",
+          "confidence": 0.05
+        }
+      ]
+    },
+    {
+      "start_time": 19.94,
+      "end_time": 20.18,
+      "alternatives": [
+        {
+          "word": "walk",
+          "confidence": 0.6
+        },
+        {
+          "word": "work",
+          "confidence": 0.15
+        },
+        {
+          "word": "what",
+          "confidence": 0.05
+        },
+        {
+          "word": "lock",
+          "confidence": 0.04
+        }
+      ]
+    },
+    {
+      "start_time": 20.18,
+      "end_time": 20.45,
+      "alternatives": [
+        {
+          "word": "water",
+          "confidence": 0.89
+        }
+      ]
+    },
+    {
+      "start_time": 20.45,
+      "end_time": 20.99,
+      "alternatives": [
+        {
+          "word": "dispenser",
+          "confidence": 0.96
+        }
+      ]
+    },
+    {
+      "start_time": 20.99,
+      "end_time": 21.05,
+      "alternatives": [
+        {
+          "word": "in",
+          "confidence": 0.92
+        },
+        {
+          "word": "on",
+          "confidence": 0.02
+        }
+      ]
+    },
+    {
+      "start_time": 21.05,
+      "end_time": 21.16,
+      "alternatives": [
+        {
+          "word": "the",
+          "confidence": 0.96
+        },
+        {
+          "word": "and",
+          "confidence": 0.01
+        }
+      ]
+    },
+    {
+      "start_time": 21.16,
+      "end_time": 21.47,
+      "alternatives": [
+        {
+          "word": "same",
+          "confidence": 0.94
+        }
+      ]
+    },
+    {
+      "start_time": 21.47,
+      "end_time": 21.85,
+      "alternatives": [
+        {
+          "word": "order",
+          "confidence": 0.94
+        }
+      ]
+    },
+    {
+      "start_time": 22,
+      "end_time": 22.05,
+      "alternatives": [
+        {
+          "word": "I",
+          "confidence": 0.97
+        }
+      ]
+    },
+    {
+      "start_time": 22.05,
+      "end_time": 22.15,
+      "alternatives": [
+        {
+          "word": "would",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 22.15,
+      "end_time": 22.28,
+      "alternatives": [
+        {
+          "word": "like",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 22.28,
+      "end_time": 22.38,
+      "alternatives": [
+        {
+          "word": "to",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 22.38,
+      "end_time": 22.64,
+      "alternatives": [
+        {
+          "word": "keep",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 22.64,
+      "end_time": 22.96,
+      "alternatives": [
+        {
+          "word": "that",
+          "confidence": 1
+        }
+      ]
+    }
+  ]
+}
+
+Final Result 5
+{
+  "final": true,
+  "alternatives": [
+    {
+      "transcript": "Okay nothing changes with the water dispenser do you have the original box in the package with you. ",
+      "confidence": 0.86,
+      "timestamps": [
+        [
+          "Okay ",
+          23.77,
+          24.16
+        ],
+        [
+          "nothing ",
+          24.36,
+          24.71
+        ],
+        [
+          "changes ",
+          24.71,
+          25.09
+        ],
+        [
+          "with ",
+          25.09,
+          25.23
+        ],
+        [
+          "the ",
+          25.23,
+          25.32
+        ],
+        [
+          "water ",
+          25.32,
+          25.53
+        ],
+        [
+          "dispenser ",
+          25.53,
+          26.15
+        ],
+        [
+          "do ",
+          26.67,
+          26.78
+        ],
+        [
+          "you ",
+          26.78,
+          26.88
+        ],
+        [
+          "have ",
+          26.88,
+          27.05
+        ],
+        [
+          "the ",
+          27.05,
+          27.12
+        ],
+        [
+          "original ",
+          27.12,
+          27.48
+        ],
+        [
+          "box ",
+          27.48,
+          27.9
+        ],
+        [
+          "in ",
+          27.9,
+          27.97
+        ],
+        [
+          "the ",
+          27.97,
+          28.06
+        ],
+        [
+          "package ",
+          28.06,
+          28.48
+        ],
+        [
+          "with ",
+          28.48,
+          28.67
+        ],
+        [
+          "you. ",
+          28.67,
+          28.91
+        ]
+      ]
+    }
+  ],
+  "word_alternatives": [
+    {
+      "start_time": 23.77,
+      "end_time": 24.16,
+      "alternatives": [
+        {
+          "word": "okay",
+          "confidence": 0.97
+        },
+        {
+          "word": "OK",
+          "confidence": 0.03
+        }
+      ]
+    },
+    {
+      "start_time": 24.36,
+      "end_time": 24.71,
+      "alternatives": [
+        {
+          "word": "nothing",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 24.71,
+      "end_time": 25.09,
+      "alternatives": [
+        {
+          "word": "changes",
+          "confidence": 0.97
+        }
+      ]
+    },
+    {
+      "start_time": 25.09,
+      "end_time": 25.23,
+      "alternatives": [
+        {
+          "word": "with",
+          "confidence": 0.94
+        },
+        {
+          "word": "but",
+          "confidence": 0.01
+        }
+      ]
+    },
+    {
+      "start_time": 25.23,
+      "end_time": 25.32,
+      "alternatives": [
+        {
+          "word": "the",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 25.32,
+      "end_time": 25.53,
+      "alternatives": [
+        {
+          "word": "water",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 25.53,
+      "end_time": 26.15,
+      "alternatives": [
+        {
+          "word": "dispenser",
+          "confidence": 0.98
+        }
+      ]
+    },
+    {
+      "start_time": 26.67,
+      "end_time": 26.78,
+      "alternatives": [
+        {
+          "word": "do",
+          "confidence": 0.97
+        }
+      ]
+    },
+    {
+      "start_time": 26.78,
+      "end_time": 26.88,
+      "alternatives": [
+        {
+          "word": "you",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 26.88,
+      "end_time": 27.05,
+      "alternatives": [
+        {
+          "word": "have",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 27.05,
+      "end_time": 27.12,
+      "alternatives": [
+        {
+          "word": "the",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 27.12,
+      "end_time": 27.48,
+      "alternatives": [
+        {
+          "word": "original",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 27.48,
+      "end_time": 27.9,
+      "alternatives": [
+        {
+          "word": "box",
+          "confidence": 0.79
+        },
+        {
+          "word": "boxes",
+          "confidence": 0.2
+        }
+      ]
+    },
+    {
+      "start_time": 27.9,
+      "end_time": 27.97,
+      "alternatives": [
+        {
+          "word": "in",
+          "confidence": 0.41
+        },
+        {
+          "word": "and",
+          "confidence": 0.16
+        },
+        {
+          "word": "of",
+          "confidence": 0.04
+        },
+        {
+          "word": "is",
+          "confidence": 0.02
+        },
+        {
+          "word": "on",
+          "confidence": 0.02
+        }
+      ]
+    },
+    {
+      "start_time": 27.97,
+      "end_time": 28.06,
+      "alternatives": [
+        {
+          "word": "the",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 28.06,
+      "end_time": 28.48,
+      "alternatives": [
+        {
+          "word": "package",
+          "confidence": 0.98
+        }
+      ]
+    },
+    {
+      "start_time": 28.48,
+      "end_time": 28.67,
+      "alternatives": [
+        {
+          "word": "with",
+          "confidence": 0.95
+        }
+      ]
+    },
+    {
+      "start_time": 28.67,
+      "end_time": 28.91,
+      "alternatives": [
+        {
+          "word": "you",
+          "confidence": 0.99
+        }
+      ]
+    }
+  ],
+  "speaker": 0
+}
+
+Final Result 6
+{
+  "alternatives": [
+    {
+      "transcript": "Yes I started report box with me. ",
+      "timestamps": [
+        [
+          "Yes ",
+          29.51,
+          29.81
+        ],
+        [
+          "I ",
+          29.81,
+          29.88
+        ],
+        [
+          "started ",
+          29.88,
+          30.33
+        ],
+        [
+          "report ",
+          30.33,
+          30.68
+        ],
+        [
+          "box ",
+          30.68,
+          30.97
+        ],
+        [
+          "with ",
+          30.97,
+          31.21
+        ],
+        [
+          "me. ",
+          31.21,
+          31.32
+        ]
+      ]
+    }
+  ],
+  "speaker": 1,
+  "final": true,
+  "word_alternatives": [
+    {
+      "start_time": 29.51,
+      "end_time": 29.81,
+      "alternatives": [
+        {
+          "word": "yes",
+          "confidence": 0.97
+        },
+        {
+          "word": "yeah",
+          "confidence": 0.03
+        }
+      ]
+    },
+    {
+      "start_time": 29.81,
+      "end_time": 29.88,
+      "alternatives": [
+        {
+          "word": "I",
+          "confidence": 0.98
+        },
+        {
+          "word": "I.",
+          "confidence": 0.01
+        }
+      ]
+    },
+    {
+      "start_time": 29.88,
+      "end_time": 30.33,
+      "alternatives": [
+        {
+          "word": "started",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "start_time": 30.33,
+      "end_time": 30.68,
+      "alternatives": [
+        {
+          "word": "report",
+          "confidence": 0.66
+        },
+        {
+          "word": "poor",
+          "confidence": 0.18
+        },
+        {
+          "word": "triple",
+          "confidence": 0.03
+        }
+      ]
+    },
+    {
+      "start_time": 30.68,
+      "end_time": 30.97,
+      "alternatives": [
+        {
+          "word": "box",
+          "confidence": 0.75
+        },
+        {
+          "word": "March",
+          "confidence": 0.07
+        },
+        {
+          "word": "barge",
+          "confidence": 0.03
+        },
+        {
+          "word": "cards",
+          "confidence": 0.02
+        }
+      ]
+    },
+    {
+      "start_time": 30.97,
+      "end_time": 31.21,
+      "alternatives": [
+        {
+          "word": "with",
+          "confidence": 0.79
+        }
+      ]
+    }
+  ]
+}
+
+Final Result 7
+{
+  "final": true,
+  "alternatives": [
+    {
+      "transcript": "In that case I can generate a return label for you thank you for contacting some part of online. ",
+      "confidence": 0.91,
+      "timestamps": [
+        [
+          "In ",
+          32.42,
+          32.54
+        ],
+        [
+          "that ",
+          32.54,
+          32.72
+        ],
+        [
+          "case ",
+          32.72,
+          33.02
+        ],
+        [
+          "I ",
+          33.02,
+          33.14
+        ],
+        [
+          "can ",
+          33.14,
+          33.32
+        ],
+        [
+          "generate ",
+          33.32,
+          33.7
+        ],
+        [
+          "a ",
+          33.7,
+          33.76
+        ],
+        [
+          "return ",
+          33.76,
+          34.15
+        ],
+        [
+          "label ",
+          34.15,
+          34.4
+        ],
+        [
+          "for ",
+          34.4,
+          34.53
+        ],
+        [
+          "you ",
+          34.53,
+          34.76
+        ],
+        [
+          "thank ",
+          34.79,
+          35.03
+        ],
+        [
+          "you ",
+          35.03,
+          35.11
+        ],
+        [
+          "for ",
+          35.11,
+          35.21
+        ],
+        [
+          "contacting ",
+          35.21,
+          35.78
+        ],
+        [
+          "some ",
+          35.78,
+          35.93
+        ],
+        [
+          "part ",
+          35.93,
+          36.13
+        ],
+        [
+          "of ",
+          36.13,
+          36.22
+        ],
+        [
+          "online. ",
+          36.22,
+          36.71
+        ]
+      ]
+    }
+  ],
+  "word_alternatives": [
+    {
+      "start_time": 32.42,
+      "end_time": 32.54,
+      "alternatives": [
+        {
+          "word": "in",
+          "confidence": 0.98
+        },
+        {
+          "word": "and",
+          "confidence": 0.01
+        }
+      ]
+    },
+    {
+      "start_time": 32.54,
+      "end_time": 32.72,
+      "alternatives": [
+        {
+          "word": "that",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 32.72,
+      "end_time": 33.02,
+      "alternatives": [
+        {
+          "word": "case",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 33.02,
+      "end_time": 33.14,
+      "alternatives": [
+        {
+          "word": "I",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 33.14,
+      "end_time": 33.32,
+      "alternatives": [
+        {
+          "word": "can",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 33.32,
+      "end_time": 33.7,
+      "alternatives": [
+        {
+          "word": "generate",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 33.7,
+      "end_time": 33.76,
+      "alternatives": [
+        {
+          "word": "a",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 33.76,
+      "end_time": 34.15,
+      "alternatives": [
+        {
+          "word": "return",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 34.15,
+      "end_time": 34.4,
+      "alternatives": [
+        {
+          "word": "label",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 34.4,
+      "end_time": 34.53,
+      "alternatives": [
+        {
+          "word": "for",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 34.53,
+      "end_time": 34.76,
+      "alternatives": [
+        {
+          "word": "you",
+          "confidence": 0.93
+        },
+        {
+          "word": "use",
+          "confidence": 0.03
+        }
+      ]
+    },
+    {
+      "start_time": 34.79,
+      "end_time": 35.03,
+      "alternatives": [
+        {
+          "word": "thank",
+          "confidence": 0.95
+        }
+      ]
+    },
+    {
+      "start_time": 35.03,
+      "end_time": 35.11,
+      "alternatives": [
+        {
+          "word": "you",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 35.11,
+      "end_time": 35.21,
+      "alternatives": [
+        {
+          "word": "for",
+          "confidence": 0.98
+        }
+      ]
+    },
+    {
+      "start_time": 35.21,
+      "end_time": 35.78,
+      "alternatives": [
+        {
+          "word": "contacting",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 35.78,
+      "end_time": 35.93,
+      "alternatives": [
+        {
+          "word": "some",
+          "confidence": 0.92
+        },
+        {
+          "word": "support",
+          "confidence": 0.03
+        },
+        {
+          "word": "us",
+          "confidence": 0.01
+        }
+      ]
+    },
+    {
+      "start_time": 35.93,
+      "end_time": 36.13,
+      "alternatives": [
+        {
+          "word": "part",
+          "confidence": 0.5
+        },
+        {
+          "word": "hot",
+          "confidence": 0.19
+        },
+        {
+          "word": "products",
+          "confidence": 0.07
+        },
+        {
+          "word": "pot",
+          "confidence": 0.05
+        },
+        {
+          "word": "thought",
+          "confidence": 0.05
+        },
+        {
+          "word": "product",
+          "confidence": 0.03
+        }
+      ]
+    },
+    {
+      "start_time": 36.13,
+      "end_time": 36.22,
+      "alternatives": [
+        {
+          "word": "of",
+          "confidence": 0.51
+        }
+      ]
+    },
+    {
+      "start_time": 36.22,
+      "end_time": 36.71,
+      "alternatives": [
+        {
+          "word": "online",
+          "confidence": 0.85
+        }
+      ]
+    }
+  ],
+  "speaker": 0
+}
+
+Final Result 8
+{
+  "alternatives": [
+    {
+      "transcript": "Sounds great I can do that thank you. ",
+      "timestamps": [
+        [
+          "Sounds ",
+          37.42,
+          37.73
+        ],
+        [
+          "great ",
+          37.73,
+          38.01
+        ],
+        [
+          "I ",
+          38.01,
+          38.07
+        ],
+        [
+          "can ",
+          38.07,
+          38.24
+        ],
+        [
+          "do ",
+          38.24,
+          38.36
+        ],
+        [
+          "that ",
+          38.36,
+          38.67
+        ],
+        [
+          "thank ",
+          38.74,
+          38.99
+        ],
+        [
+          "you. ",
+          38.99,
+          39.13
+        ]
+      ]
+    }
+  ],
+  "speaker": 1,
+  "final": true,
+  "word_alternatives": [
+    {
+      "start_time": 37.42,
+      "end_time": 37.73,
+      "alternatives": [
+        {
+          "word": "sounds",
+          "confidence": 0.95
+        }
+      ]
+    },
+    {
+      "start_time": 37.73,
+      "end_time": 38.01,
+      "alternatives": [
+        {
+          "word": "great",
+          "confidence": 0.95
+        }
+      ]
+    },
+    {
+      "start_time": 38.01,
+      "end_time": 38.07,
+      "alternatives": [
+        {
+          "word": "I",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 38.07,
+      "end_time": 38.24,
+      "alternatives": [
+        {
+          "word": "can",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 38.24,
+      "end_time": 38.36,
+      "alternatives": [
+        {
+          "word": "do",
+          "confidence": 0.97
+        },
+        {
+          "word": "use",
+          "confidence": 0.01
+        }
+      ]
+    },
+    {
+      "start_time": 38.36,
+      "end_time": 38.67,
+      "alternatives": [
+        {
+          "word": "that",
+          "confidence": 0.98
+        }
+      ]
+    },
+    {
+      "start_time": 38.74,
+      "end_time": 38.99,
+      "alternatives": [
+        {
+          "word": "thank",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 38.99,
+      "end_time": 39.13,
+      "alternatives": [
+        {
+          "word": "you",
+          "confidence": 0.99
+        }
+      ]
+    }
+  ]
+}
+
+
+Final Result 1
+{
+  "final": true,
+  "alternatives": [
+    {
+      "transcript": "Welcome to Zippata online how may I help you. ",
+      "confidence": 0.96,
+      "timestamps": [
+        [
+          "Welcome ",
+          0,
+          0.33
+        ],
+        [
+          "to ",
+          0.33,
+          0.55
+        ],
+        [
+          "Zippata ",
+          0.55,
+          1.03
+        ],
+        [
+          "online ",
+          1.03,
+          1.57
+        ],
+        [
+          "how ",
+          1.57,
+          1.71
+        ],
+        [
+          "may ",
+          1.71,
+          1.85
+        ],
+        [
+          "I ",
+          1.85,
+          1.92
+        ],
+        [
+          "help ",
+          1.92,
+          2.11
+        ],
+        [
+          "you. ",
+          2.11,
+          2.39
+        ]
+      ]
+    }
+  ],
+  "word_alternatives": [
+    {
+      "start_time": 0,
+      "end_time": 0.33,
+      "alternatives": [
+        {
+          "word": "welcome",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 0.33,
+      "end_time": 0.55,
+      "alternatives": [
+        {
+          "word": "to",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 0.55,
+      "end_time": 1.03,
+      "alternatives": [
+        {
+          "word": "Zippata",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 1.03,
+      "end_time": 1.57,
+      "alternatives": [
+        {
+          "word": "online",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 1.57,
+      "end_time": 1.71,
+      "alternatives": [
+        {
+          "word": "how",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 1.71,
+      "end_time": 1.85,
+      "alternatives": [
+        {
+          "word": "may",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 1.85,
+      "end_time": 1.92,
+      "alternatives": [
+        {
+          "word": "I",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 1.92,
+      "end_time": 2.11,
+      "alternatives": [
+        {
+          "word": "help",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 2.11,
+      "end_time": 2.39,
+      "alternatives": [
+        {
+          "word": "you",
+          "confidence": 1
+        }
+      ]
+    }
+  ],
+  "speaker": 0
+}
+
+Final Result 2
+{
+  "alternatives": [
+    {
+      "transcript": "Ordered a Tripvor robot vacuum cleaner last week which got delivered yesterday I can cleaner appears to be damaged I was wondering if I can get a refund. ",
+      "timestamps": [
+        [
+          "Ordered ",
+          3.09,
+          3.47
+        ],
+        [
+          "a ",
+          3.47,
+          3.53
+        ],
+        [
+          "Tripvor ",
+          3.53,
+          4.03
+        ],
+        [
+          "robot ",
+          4.03,
+          4.47
+        ],
+        [
+          "vacuum ",
+          4.47,
+          4.89
+        ],
+        [
+          "cleaner ",
+          4.89,
+          5.26
+        ],
+        [
+          "last ",
+          5.26,
+          5.63
+        ],
+        [
+          "week ",
+          5.63,
+          5.88
+        ],
+        [
+          "which ",
+          5.93,
+          6.11
+        ],
+        [
+          "got ",
+          6.11,
+          6.27
+        ],
+        [
+          "delivered ",
+          6.27,
+          6.62
+        ],
+        [
+          "yesterday ",
+          6.62,
+          7.24
+        ],
+        [
+          "I ",
+          7.74,
+          7.82
+        ],
+        [
+          "can ",
+          7.82,
+          8.02
+        ],
+        [
+          "cleaner ",
+          8.02,
+          8.35
+        ],
+        [
+          "appears ",
+          8.35,
+          8.74
+        ],
+        [
+          "to ",
+          8.74,
+          8.81
+        ],
+        [
+          "be ",
+          8.81,
+          8.92
+        ],
+        [
+          "damaged ",
+          8.92,
+          9.59
+        ],
+        [
+          "I ",
+          9.65,
+          9.68
+        ],
+        [
+          "was ",
+          9.68,
+          9.78
+        ],
+        [
+          "wondering ",
+          9.78,
+          10.11
+        ],
+        [
+          "if ",
+          10.11,
+          10.24
+        ],
+        [
+          "I ",
+          10.24,
+          10.32
+        ],
+        [
+          "can ",
+          10.32,
+          10.49
+        ],
+        [
+          "get ",
+          10.49,
+          10.61
+        ],
+        [
+          "a ",
+          10.61,
+          10.66
+        ],
+        [
+          "refund. ",
+          10.66,
+          11.32
+        ]
+      ]
+    }
+  ],
+  "speaker": 1,
+  "final": true,
+  "word_alternatives": [
+    {
+      "start_time": 3.09,
+      "end_time": 3.47,
+      "alternatives": [
+        {
+          "word": "ordered",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 3.47,
+      "end_time": 3.53,
+      "alternatives": [
+        {
+          "word": "a",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 3.53,
+      "end_time": 4.03,
+      "alternatives": [
+        {
+          "word": "Tripvor",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 4.03,
+      "end_time": 4.47,
+      "alternatives": [
+        {
+          "word": "robot",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 4.47,
+      "end_time": 4.89,
+      "alternatives": [
+        {
+          "word": "vacuum",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 4.89,
+      "end_time": 5.26,
+      "alternatives": [
+        {
+          "word": "cleaner",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 5.26,
+      "end_time": 5.63,
+      "alternatives": [
+        {
+          "word": "last",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 5.63,
+      "end_time": 5.88,
+      "alternatives": [
+        {
+          "word": "week",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 5.93,
+      "end_time": 6.11,
+      "alternatives": [
+        {
+          "word": "which",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 6.11,
+      "end_time": 6.27,
+      "alternatives": [
+        {
+          "word": "got",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 6.27,
+      "end_time": 6.62,
+      "alternatives": [
+        {
+          "word": "delivered",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 6.62,
+      "end_time": 7.24,
+      "alternatives": [
+        {
+          "word": "yesterday",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 7.74,
+      "end_time": 7.82,
+      "alternatives": [
+        {
+          "word": "I",
+          "confidence": 0.94
+        }
+      ]
+    },
+    {
+      "start_time": 7.83,
+      "end_time": 8.02,
+      "alternatives": [
+        {
+          "word": "can",
+          "confidence": 0.96
+        }
+      ]
+    },
+    {
+      "start_time": 8.02,
+      "end_time": 8.35,
+      "alternatives": [
+        {
+          "word": "cleaner",
+          "confidence": 0.97
+        }
+      ]
+    },
+    {
+      "start_time": 8.35,
+      "end_time": 8.74,
+      "alternatives": [
+        {
+          "word": "appears",
+          "confidence": 0.94
+        },
+        {
+          "word": "appeared",
+          "confidence": 0.05
+        }
+      ]
+    },
+    {
+      "start_time": 8.74,
+      "end_time": 8.81,
+      "alternatives": [
+        {
+          "word": "to",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 8.81,
+      "end_time": 8.92,
+      "alternatives": [
+        {
+          "word": "be",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 8.92,
+      "end_time": 9.59,
+      "alternatives": [
+        {
+          "word": "damaged",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 9.65,
+      "end_time": 9.68,
+      "alternatives": [
+        {
+          "word": "I",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "start_time": 9.68,
+      "end_time": 9.78,
+      "alternatives": [
+        {
+          "word": "was",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 9.78,
+      "end_time": 10.11,
+      "alternatives": [
+        {
+          "word": "wondering",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 10.11,
+      "end_time": 10.24,
+      "alternatives": [
+        {
+          "word": "if",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 10.24,
+      "end_time": 10.32,
+      "alternatives": [
+        {
+          "word": "I",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 10.32,
+      "end_time": 10.49,
+      "alternatives": [
+        {
+          "word": "can",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 10.49,
+      "end_time": 10.61,
+      "alternatives": [
+        {
+          "word": "get",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 10.61,
+      "end_time": 10.66,
+      "alternatives": [
+        {
+          "word": "a",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 10.66,
+      "end_time": 11.32,
+      "alternatives": [
+        {
+          "word": "refund",
+          "confidence": 0.99
+        }
+      ]
+    }
+  ]
+}
+
+Final Result 3
+{
+  "final": true,
+  "alternatives": [
+    {
+      "transcript": "If the product is damaged you can return the product to get a full refund do you want me to process the return. ",
+      "confidence": 0.91,
+      "timestamps": [
+        [
+          "If ",
+          12.68,
+          12.82
+        ],
+        [
+          "the ",
+          12.82,
+          12.91
+        ],
+        [
+          "product ",
+          12.91,
+          13.24
+        ],
+        [
+          "is ",
+          13.24,
+          13.36
+        ],
+        [
+          "damaged ",
+          13.36,
+          13.84
+        ],
+        [
+          "you ",
+          13.84,
+          13.94
+        ],
+        [
+          "can ",
+          13.94,
+          14.06
+        ],
+        [
+          "return ",
+          14.06,
+          14.44
+        ],
+        [
+          "the ",
+          14.44,
+          14.53
+        ],
+        [
+          "product ",
+          14.53,
+          14.85
+        ],
+        [
+          "to ",
+          14.85,
+          14.92
+        ],
+        [
+          "get ",
+          14.92,
+          15.02
+        ],
+        [
+          "a ",
+          15.02,
+          15.07
+        ],
+        [
+          "full ",
+          15.07,
+          15.28
+        ],
+        [
+          "refund ",
+          15.28,
+          15.97
+        ],
+        [
+          "do ",
+          16.02,
+          16.13
+        ],
+        [
+          "you ",
+          16.13,
+          16.2
+        ],
+        [
+          "want ",
+          16.2,
+          16.32
+        ],
+        [
+          "me ",
+          16.32,
+          16.38
+        ],
+        [
+          "to ",
+          16.38,
+          16.45
+        ],
+        [
+          "process ",
+          16.45,
+          16.96
+        ],
+        [
+          "the ",
+          16.96,
+          17.07
+        ],
+        [
+          "return. ",
+          17.07,
+          17.53
+        ]
+      ]
+    }
+  ],
+  "word_alternatives": [
+    {
+      "start_time": 12.68,
+      "end_time": 12.82,
+      "alternatives": [
+        {
+          "word": "if",
+          "confidence": 0.97
+        },
+        {
+          "word": "it",
+          "confidence": 0.01
+        }
+      ]
+    },
+    {
+      "start_time": 12.82,
+      "end_time": 12.91,
+      "alternatives": [
+        {
+          "word": "the",
+          "confidence": 0.96
+        },
+        {
+          "word": "a",
+          "confidence": 0.03
+        }
+      ]
+    },
+    {
+      "start_time": 12.91,
+      "end_time": 13.24,
+      "alternatives": [
+        {
+          "word": "product",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 13.24,
+      "end_time": 13.36,
+      "alternatives": [
+        {
+          "word": "is",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 13.36,
+      "end_time": 13.84,
+      "alternatives": [
+        {
+          "word": "damaged",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 13.84,
+      "end_time": 13.94,
+      "alternatives": [
+        {
+          "word": "you",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 13.94,
+      "end_time": 14.06,
+      "alternatives": [
+        {
+          "word": "can",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 14.06,
+      "end_time": 14.44,
+      "alternatives": [
+        {
+          "word": "return",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 14.44,
+      "end_time": 14.53,
+      "alternatives": [
+        {
+          "word": "the",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 14.53,
+      "end_time": 14.85,
+      "alternatives": [
+        {
+          "word": "product",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 14.85,
+      "end_time": 14.92,
+      "alternatives": [
+        {
+          "word": "to",
+          "confidence": 0.96
+        },
+        {
+          "word": "you",
+          "confidence": 0.04
+        }
+      ]
+    },
+    {
+      "start_time": 14.92,
+      "end_time": 15.02,
+      "alternatives": [
+        {
+          "word": "get",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 15.02,
+      "end_time": 15.07,
+      "alternatives": [
+        {
+          "word": "a",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 15.07,
+      "end_time": 15.28,
+      "alternatives": [
+        {
+          "word": "full",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 15.28,
+      "end_time": 15.97,
+      "alternatives": [
+        {
+          "word": "refund",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 16.02,
+      "end_time": 16.13,
+      "alternatives": [
+        {
+          "word": "do",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 16.13,
+      "end_time": 16.2,
+      "alternatives": [
+        {
+          "word": "you",
+          "confidence": 0.98
+        }
+      ]
+    },
+    {
+      "start_time": 16.2,
+      "end_time": 16.32,
+      "alternatives": [
+        {
+          "word": "want",
+          "confidence": 0.98
+        }
+      ]
+    },
+    {
+      "start_time": 16.32,
+      "end_time": 16.38,
+      "alternatives": [
+        {
+          "word": "me",
+          "confidence": 0.97
+        }
+      ]
+    },
+    {
+      "start_time": 16.38,
+      "end_time": 16.45,
+      "alternatives": [
+        {
+          "word": "to",
+          "confidence": 0.98
+        }
+      ]
+    },
+    {
+      "start_time": 16.45,
+      "end_time": 16.96,
+      "alternatives": [
+        {
+          "word": "process",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 16.96,
+      "end_time": 17.07,
+      "alternatives": [
+        {
+          "word": "the",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 17.07,
+      "end_time": 17.53,
+      "alternatives": [
+        {
+          "word": "return",
+          "confidence": 1
+        }
+      ]
+    }
+  ],
+  "speaker": 0
+}
+
+Final Result 4
+{
+  "alternatives": [
+    {
+      "transcript": "That would be awesome I had a Microwoc water dispenser in the same order I would like to keep that. ",
+      "timestamps": [
+        [
+          "That ",
+          18.09,
+          18.28
+        ],
+        [
+          "would ",
+          18.28,
+          18.41
+        ],
+        [
+          "be ",
+          18.41,
+          18.51
+        ],
+        [
+          "awesome ",
+          18.51,
+          19.02
+        ],
+        [
+          "I ",
+          19.27,
+          19.39
+        ],
+        [
+          "had ",
+          19.39,
+          19.52
+        ],
+        [
+          "a ",
+          19.52,
+          19.57
+        ],
+        [
+          "Microwoc ",
+          19.57,
+          20.18
+        ],
+        [
+          "water ",
+          20.18,
+          20.45
+        ],
+        [
+          "dispenser ",
+          20.45,
+          20.99
+        ],
+        [
+          "in ",
+          20.99,
+          21.05
+        ],
+        [
+          "the ",
+          21.05,
+          21.16
+        ],
+        [
+          "same ",
+          21.16,
+          21.47
+        ],
+        [
+          "order ",
+          21.47,
+          21.85
+        ],
+        [
+          "I ",
+          22,
+          22.05
+        ],
+        [
+          "would ",
+          22.05,
+          22.15
+        ],
+        [
+          "like ",
+          22.15,
+          22.28
+        ],
+        [
+          "to ",
+          22.28,
+          22.38
+        ],
+        [
+          "keep ",
+          22.38,
+          22.64
+        ],
+        [
+          "that. ",
+          22.64,
+          22.96
+        ]
+      ]
+    }
+  ],
+  "speaker": 1,
+  "final": true,
+  "word_alternatives": [
+    {
+      "start_time": 18.09,
+      "end_time": 18.28,
+      "alternatives": [
+        {
+          "word": "that",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 18.28,
+      "end_time": 18.41,
+      "alternatives": [
+        {
+          "word": "would",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 18.41,
+      "end_time": 18.51,
+      "alternatives": [
+        {
+          "word": "be",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 18.51,
+      "end_time": 19.02,
+      "alternatives": [
+        {
+          "word": "awesome",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 19.27,
+      "end_time": 19.39,
+      "alternatives": [
+        {
+          "word": "I",
+          "confidence": 0.94
+        }
+      ]
+    },
+    {
+      "start_time": 19.39,
+      "end_time": 19.52,
+      "alternatives": [
+        {
+          "word": "had",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 19.52,
+      "end_time": 19.57,
+      "alternatives": [
+        {
+          "word": "a",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 19.57,
+      "end_time": 20.18,
+      "alternatives": [
+        {
+          "word": "Microwoc",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 20.18,
+      "end_time": 20.45,
+      "alternatives": [
+        {
+          "word": "water",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 20.45,
+      "end_time": 20.99,
+      "alternatives": [
+        {
+          "word": "dispenser",
+          "confidence": 0.98
+        }
+      ]
+    },
+    {
+      "start_time": 20.99,
+      "end_time": 21.05,
+      "alternatives": [
+        {
+          "word": "in",
+          "confidence": 0.79
+        },
+        {
+          "word": "and",
+          "confidence": 0.06
+        },
+        {
+          "word": "<eps>",
+          "confidence": 0.05
+        },
+        {
+          "word": "on",
+          "confidence": 0.04
+        }
+      ]
+    },
+    {
+      "start_time": 21.05,
+      "end_time": 21.16,
+      "alternatives": [
+        {
+          "word": "the",
+          "confidence": 0.86
+        }
+      ]
+    },
+    {
+      "start_time": 21.16,
+      "end_time": 21.47,
+      "alternatives": [
+        {
+          "word": "same",
+          "confidence": 0.91
+        }
+      ]
+    },
+    {
+      "start_time": 21.47,
+      "end_time": 21.85,
+      "alternatives": [
+        {
+          "word": "ordered",
+          "confidence": 0.39
+        },
+        {
+          "word": "order",
+          "confidence": 0.21
+        },
+        {
+          "word": "water",
+          "confidence": 0.15
+        }
+      ]
+    },
+    {
+      "start_time": 22,
+      "end_time": 22.05,
+      "alternatives": [
+        {
+          "word": "I",
+          "confidence": 0.97
+        }
+      ]
+    },
+    {
+      "start_time": 22.05,
+      "end_time": 22.15,
+      "alternatives": [
+        {
+          "word": "would",
+          "confidence": 0.98
+        }
+      ]
+    },
+    {
+      "start_time": 22.15,
+      "end_time": 22.28,
+      "alternatives": [
+        {
+          "word": "like",
+          "confidence": 0.98
+        }
+      ]
+    },
+    {
+      "start_time": 22.28,
+      "end_time": 22.38,
+      "alternatives": [
+        {
+          "word": "to",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 22.38,
+      "end_time": 22.64,
+      "alternatives": [
+        {
+          "word": "keep",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 22.64,
+      "end_time": 22.96,
+      "alternatives": [
+        {
+          "word": "that",
+          "confidence": 1
+        }
+      ]
+    }
+  ]
+}
+
+Final Result 5
+{
+  "final": true,
+  "alternatives": [
+    {
+      "transcript": "Okay nothing changes with the water dispenser do you have the original box in the package with you. ",
+      "confidence": 0.93,
+      "timestamps": [
+        [
+          "Okay ",
+          23.77,
+          24.16
+        ],
+        [
+          "nothing ",
+          24.36,
+          24.71
+        ],
+        [
+          "changes ",
+          24.71,
+          25.09
+        ],
+        [
+          "with ",
+          25.09,
+          25.23
+        ],
+        [
+          "the ",
+          25.23,
+          25.32
+        ],
+        [
+          "water ",
+          25.32,
+          25.53
+        ],
+        [
+          "dispenser ",
+          25.53,
+          26.15
+        ],
+        [
+          "do ",
+          26.67,
+          26.78
+        ],
+        [
+          "you ",
+          26.78,
+          26.88
+        ],
+        [
+          "have ",
+          26.88,
+          27.05
+        ],
+        [
+          "the ",
+          27.05,
+          27.12
+        ],
+        [
+          "original ",
+          27.12,
+          27.48
+        ],
+        [
+          "box ",
+          27.48,
+          27.9
+        ],
+        [
+          "in ",
+          27.9,
+          27.97
+        ],
+        [
+          "the ",
+          27.97,
+          28.06
+        ],
+        [
+          "package ",
+          28.06,
+          28.48
+        ],
+        [
+          "with ",
+          28.48,
+          28.67
+        ],
+        [
+          "you. ",
+          28.67,
+          28.91
+        ]
+      ]
+    }
+  ],
+  "word_alternatives": [
+    {
+      "start_time": 23.77,
+      "end_time": 24.16,
+      "alternatives": [
+        {
+          "word": "okay",
+          "confidence": 0.97
+        },
+        {
+          "word": "OK",
+          "confidence": 0.03
+        }
+      ]
+    },
+    {
+      "start_time": 24.36,
+      "end_time": 24.71,
+      "alternatives": [
+        {
+          "word": "nothing",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 24.71,
+      "end_time": 25.09,
+      "alternatives": [
+        {
+          "word": "changes",
+          "confidence": 0.98
+        }
+      ]
+    },
+    {
+      "start_time": 25.09,
+      "end_time": 25.23,
+      "alternatives": [
+        {
+          "word": "with",
+          "confidence": 0.96
+        }
+      ]
+    },
+    {
+      "start_time": 25.23,
+      "end_time": 25.32,
+      "alternatives": [
+        {
+          "word": "the",
+          "confidence": 0.95
+        },
+        {
+          "word": "a",
+          "confidence": 0.04
+        }
+      ]
+    },
+    {
+      "start_time": 25.32,
+      "end_time": 25.53,
+      "alternatives": [
+        {
+          "word": "water",
+          "confidence": 0.98
+        }
+      ]
+    },
+    {
+      "start_time": 25.53,
+      "end_time": 26.15,
+      "alternatives": [
+        {
+          "word": "dispenser",
+          "confidence": 0.97
+        }
+      ]
+    },
+    {
+      "start_time": 26.67,
+      "end_time": 26.78,
+      "alternatives": [
+        {
+          "word": "do",
+          "confidence": 0.93
+        }
+      ]
+    },
+    {
+      "start_time": 26.78,
+      "end_time": 26.88,
+      "alternatives": [
+        {
+          "word": "you",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 26.88,
+      "end_time": 27.05,
+      "alternatives": [
+        {
+          "word": "have",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 27.05,
+      "end_time": 27.12,
+      "alternatives": [
+        {
+          "word": "the",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 27.12,
+      "end_time": 27.48,
+      "alternatives": [
+        {
+          "word": "original",
+          "confidence": 0.97
+        },
+        {
+          "word": "regional",
+          "confidence": 0.03
+        }
+      ]
+    },
+    {
+      "start_time": 27.48,
+      "end_time": 27.9,
+      "alternatives": [
+        {
+          "word": "box",
+          "confidence": 0.9
+        },
+        {
+          "word": "boxes",
+          "confidence": 0.07
+        }
+      ]
+    },
+    {
+      "start_time": 27.9,
+      "end_time": 27.97,
+      "alternatives": [
+        {
+          "word": "in",
+          "confidence": 0.33
+        },
+        {
+          "word": "with",
+          "confidence": 0.19
+        },
+        {
+          "word": "and",
+          "confidence": 0.17
+        },
+        {
+          "word": "of",
+          "confidence": 0.05
+        },
+        {
+          "word": "is",
+          "confidence": 0.02
+        },
+        {
+          "word": "on",
+          "confidence": 0.02
+        }
+      ]
+    },
+    {
+      "start_time": 27.97,
+      "end_time": 28.06,
+      "alternatives": [
+        {
+          "word": "the",
+          "confidence": 0.95
+        },
+        {
+          "word": "a",
+          "confidence": 0.02
+        }
+      ]
+    },
+    {
+      "start_time": 28.06,
+      "end_time": 28.48,
+      "alternatives": [
+        {
+          "word": "package",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 28.48,
+      "end_time": 28.67,
+      "alternatives": [
+        {
+          "word": "with",
+          "confidence": 0.97
+        }
+      ]
+    },
+    {
+      "start_time": 28.67,
+      "end_time": 28.91,
+      "alternatives": [
+        {
+          "word": "you",
+          "confidence": 0.98
+        }
+      ]
+    }
+  ],
+  "speaker": 0
+}
+
+Final Result 6
+{
+  "alternatives": [
+    {
+      "transcript": "Yes I still have the Tripvor box with me. ",
+      "timestamps": [
+        [
+          "Yes ",
+          29.51,
+          29.81
+        ],
+        [
+          "I ",
+          29.81,
+          29.88
+        ],
+        [
+          "still ",
+          29.88,
+          30.07
+        ],
+        [
+          "have ",
+          30.07,
+          30.18
+        ],
+        [
+          "the ",
+          30.18,
+          30.26
+        ],
+        [
+          "Tripvor ",
+          30.26,
+          30.65
+        ],
+        [
+          "box ",
+          30.65,
+          30.97
+        ],
+        [
+          "with ",
+          30.97,
+          31.21
+        ],
+        [
+          "me. ",
+          31.21,
+          31.32
+        ]
+      ]
+    }
+  ],
+  "speaker": 1,
+  "final": true,
+  "word_alternatives": [
+    {
+      "start_time": 29.51,
+      "end_time": 29.81,
+      "alternatives": [
+        {
+          "word": "yes",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 29.81,
+      "end_time": 29.88,
+      "alternatives": [
+        {
+          "word": "I",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 29.88,
+      "end_time": 30.07,
+      "alternatives": [
+        {
+          "word": "still",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 30.07,
+      "end_time": 30.18,
+      "alternatives": [
+        {
+          "word": "have",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 30.18,
+      "end_time": 30.26,
+      "alternatives": [
+        {
+          "word": "the",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 30.26,
+      "end_time": 30.65,
+      "alternatives": [
+        {
+          "word": "Tripvor",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 30.65,
+      "end_time": 30.97,
+      "alternatives": [
+        {
+          "word": "box",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 30.97,
+      "end_time": 31.21,
+      "alternatives": [
+        {
+          "word": "with",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 31.21,
+      "end_time": 31.32,
+      "alternatives": [
+        {
+          "word": "me",
+          "confidence": 0.98
+        }
+      ]
+    }
+  ]
+}
+
+Final Result 7
+{
+  "final": true,
+  "alternatives": [
+    {
+      "transcript": "In that case I can generate a return label for you thank you for contacting Zippata online. ",
+      "confidence": 0.94,
+      "timestamps": [
+        [
+          "In ",
+          32.42,
+          32.54
+        ],
+        [
+          "that ",
+          32.54,
+          32.72
+        ],
+        [
+          "case ",
+          32.72,
+          33.02
+        ],
+        [
+          "I ",
+          33.02,
+          33.14
+        ],
+        [
+          "can ",
+          33.14,
+          33.32
+        ],
+        [
+          "generate ",
+          33.32,
+          33.7
+        ],
+        [
+          "a ",
+          33.7,
+          33.76
+        ],
+        [
+          "return ",
+          33.76,
+          34.15
+        ],
+        [
+          "label ",
+          34.15,
+          34.4
+        ],
+        [
+          "for ",
+          34.4,
+          34.53
+        ],
+        [
+          "you ",
+          34.53,
+          34.69
+        ],
+        [
+          "thank ",
+          34.69,
+          35.03
+        ],
+        [
+          "you ",
+          35.03,
+          35.11
+        ],
+        [
+          "for ",
+          35.11,
+          35.21
+        ],
+        [
+          "contacting ",
+          35.21,
+          35.79
+        ],
+        [
+          "Zippata ",
+          35.79,
+          36.2
+        ],
+        [
+          "online. ",
+          36.2,
+          36.71
+        ]
+      ]
+    }
+  ],
+  "word_alternatives": [
+    {
+      "start_time": 32.42,
+      "end_time": 32.54,
+      "alternatives": [
+        {
+          "word": "in",
+          "confidence": 0.99
+        },
+        {
+          "word": "and",
+          "confidence": 0.01
+        }
+      ]
+    },
+    {
+      "start_time": 32.54,
+      "end_time": 32.72,
+      "alternatives": [
+        {
+          "word": "that",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 32.72,
+      "end_time": 33.02,
+      "alternatives": [
+        {
+          "word": "case",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 33.02,
+      "end_time": 33.14,
+      "alternatives": [
+        {
+          "word": "I",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 33.14,
+      "end_time": 33.32,
+      "alternatives": [
+        {
+          "word": "can",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 33.32,
+      "end_time": 33.7,
+      "alternatives": [
+        {
+          "word": "generate",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 33.7,
+      "end_time": 33.76,
+      "alternatives": [
+        {
+          "word": "a",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 33.76,
+      "end_time": 34.15,
+      "alternatives": [
+        {
+          "word": "return",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 34.15,
+      "end_time": 34.4,
+      "alternatives": [
+        {
+          "word": "label",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 34.4,
+      "end_time": 34.53,
+      "alternatives": [
+        {
+          "word": "for",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 34.53,
+      "end_time": 34.69,
+      "alternatives": [
+        {
+          "word": "you",
+          "confidence": 0.9
+        },
+        {
+          "word": "use",
+          "confidence": 0.06
+        }
+      ]
+    },
+    {
+      "start_time": 34.69,
+      "end_time": 35.03,
+      "alternatives": [
+        {
+          "word": "thank",
+          "confidence": 0.95
+        }
+      ]
+    },
+    {
+      "start_time": 35.03,
+      "end_time": 35.11,
+      "alternatives": [
+        {
+          "word": "you",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 35.11,
+      "end_time": 35.21,
+      "alternatives": [
+        {
+          "word": "for",
+          "confidence": 0.98
+        }
+      ]
+    },
+    {
+      "start_time": 35.21,
+      "end_time": 35.79,
+      "alternatives": [
+        {
+          "word": "contacting",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 35.79,
+      "end_time": 36.2,
+      "alternatives": [
+        {
+          "word": "Zippata",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 36.2,
+      "end_time": 36.71,
+      "alternatives": [
+        {
+          "word": "online",
+          "confidence": 1
+        }
+      ]
+    }
+  ],
+  "speaker": 0
+}
+
+Final Result 8
+{
+  "alternatives": [
+    {
+      "transcript": "Sounds great I can do that thank you. ",
+      "timestamps": [
+        [
+          "Sounds ",
+          37.42,
+          37.73
+        ],
+        [
+          "great ",
+          37.73,
+          38.01
+        ],
+        [
+          "I ",
+          38.01,
+          38.07
+        ],
+        [
+          "can ",
+          38.07,
+          38.24
+        ],
+        [
+          "do ",
+          38.24,
+          38.36
+        ],
+        [
+          "that ",
+          38.36,
+          38.67
+        ],
+        [
+          "thank ",
+          38.74,
+          38.99
+        ],
+        [
+          "you. ",
+          38.99,
+          39.13
+        ]
+      ]
+    }
+  ],
+  "speaker": 1,
+  "final": true,
+  "word_alternatives": [
+    {
+      "start_time": 37.42,
+      "end_time": 37.73,
+      "alternatives": [
+        {
+          "word": "sounds",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 37.73,
+      "end_time": 38.01,
+      "alternatives": [
+        {
+          "word": "great",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 38.01,
+      "end_time": 38.07,
+      "alternatives": [
+        {
+          "word": "I",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 38.07,
+      "end_time": 38.24,
+      "alternatives": [
+        {
+          "word": "can",
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "start_time": 38.24,
+      "end_time": 38.36,
+      "alternatives": [
+        {
+          "word": "do",
+          "confidence": 0.96
+        },
+        {
+          "word": "use",
+          "confidence": 0.02
+        }
+      ]
+    },
+    {
+      "start_time": 38.36,
+      "end_time": 38.67,
+      "alternatives": [
+        {
+          "word": "that",
+          "confidence": 0.98
+        }
+      ]
+    },
+    {
+      "start_time": 38.74,
+      "end_time": 38.99,
+      "alternatives": [
+        {
+          "word": "thank",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "start_time": 38.99,
+      "end_time": 39.13,
+      "alternatives": [
+        {
+          "word": "you",
+          "confidence": 0.99
+        }
+      ]
+    }
+  ]
+}
+</script> 
+
+
+
+</body> 
+
+  
+
+
+</html> 
